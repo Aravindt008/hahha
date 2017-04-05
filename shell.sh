@@ -1,0 +1,35 @@
+#!/bin/bash
+clear
+sum=0
+i=y
+echo "enter one numbr"
+read n1
+echo "enter 2nd numbr"
+read n2
+while [ $i="y" ]
+do
+echo "1.Addition"
+echo "2.Substraction"
+echo "3.multiplicatn"
+echo "4.division"
+echo "Enter your choice"
+read ch
+case $ch in
+	1)sum=`expr $n1 + $n2`
+		echo "sum="$sum;;
+	2)sum=`expr $n1 - $n2`
+		echo "sub="$sum;;
+	3)sum=`expr $n1 \* $n2`
+		echo "mul="$sum;;
+	4)sum=`expr $n1 / $n2`
+		echo "div="$sum;;
+	*)echo "invalid choice"
+		esac
+	echo "do u want to continue ?"
+  read i
+	if [ $i !="y" ]
+	then
+			exit
+	fi
+	done
+	
